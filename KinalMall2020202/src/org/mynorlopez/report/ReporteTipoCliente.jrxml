@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteTipoCliente" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ab9e4d74-0254-4b97-a0e7-3389f5377189">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codTipoCliente" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from TipoCliente where codigoTipoCliente = $P{codTipoCliente} ;]]>
+	</queryString>
+	<field name="codigoTipoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" uuid="bc0140b1-6fd4-4acc-b6bd-dd08979ee5c8"/>
+				<imageExpression><![CDATA["C:\\Users\\mynor\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020202\\src\\org\\mynorlopez\\images\\fondo reporte.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="71" height="79" uuid="93f2cc94-c88c-40a5-aceb-86f21d190e3e"/>
+				<imageExpression><![CDATA["C:\\Users\\mynor\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020202\\src\\org\\mynorlopez\\images\\Logo menu.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="196" y="37" width="177" height="20" uuid="bc4be993-b399-4a32-b46b-161969c471c7"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Tipo de Cliente]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="39" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="54" y="2" width="117" height="20" uuid="076d55bd-6907-4298-8282-6f3b22c30238"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código del Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="0" width="100" height="20" uuid="98b26a05-41a1-4b8c-8496-5d58f80bba4c"/>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="54" y="11" width="100" height="20" uuid="8bca6a27-aae2-4065-ae47-220ad38dd8f9"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoTipoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="207" y="11" width="100" height="20" uuid="4841cf2e-0d19-466c-b301-cf9af09d0b57"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

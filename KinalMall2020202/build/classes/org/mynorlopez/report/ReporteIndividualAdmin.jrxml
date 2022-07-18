@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteIndividualAdmin" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="00ea7c0a-ff3e-4999-ac61-1a91e4941bcd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codigoAdministracion2" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_BuscarAdministracion($P{codigoAdministracion2});]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" uuid="6fce7590-8186-47a0-b9c8-aeaf4781106a"/>
+				<imageExpression><![CDATA["C:\\Users\\mynor\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020202\\src\\org\\mynorlopez\\images\\fondo reporte.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="179" y="33" width="207" height="36" uuid="8b07efae-9f00-4e91-b24e-067415d20b05"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Administración]]></text>
+			</staticText>
+			<image scaleImage="FillFrame">
+				<reportElement x="42" y="0" width="70" height="79" uuid="7744c4c6-1b60-4542-bcfd-74dcc075562d"/>
+				<imageExpression><![CDATA["C:\\Users\\mynor\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020202\\src\\org\\mynorlopez\\images\\Logo menu.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="60" y="29" width="480" height="20" backcolor="#FF0000" uuid="8f9ab692-ff52-4ad1-aac8-12dc2de2e7ad"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="79" y="29" width="160" height="20" uuid="86c01eed-b7ad-44c0-ba17-62373467cf19"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CódigoAdministración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="274" y="29" width="100" height="20" uuid="69a5a7bd-6717-4a97-89fd-fb1f39be6248"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="29" width="100" height="20" uuid="0595ebfa-ccd9-405c-af01-b88ae94e2b6a"/>
+				<textElement>
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="66" splitType="Stretch">
+			<textField>
+				<reportElement x="79" y="11" width="100" height="20" uuid="5f9d138f-ec35-4af4-aca4-b8ab7b89c2d2"/>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="274" y="11" width="100" height="20" uuid="cb573079-7d4f-444d-ab5e-5c43a68c104e"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="11" width="100" height="20" uuid="0a544d67-158a-4945-b4a3-8c9dfec222b2"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="79" y="41" width="461" height="2" uuid="d8b65893-8f8a-4b0b-a17b-546e3916894f"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

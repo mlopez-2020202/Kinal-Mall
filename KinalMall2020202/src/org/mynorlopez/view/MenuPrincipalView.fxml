@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mynorlopez.controller.MenuPrincipalController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="361.0">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="369.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Logo%20menu.png" />
+               </image>
+            </ImageView>
+            <MenuBar layoutY="-3.0" prefHeight="44.0" prefWidth="369.0" stylesheets="@../resource/KinalMallCSS.css">
+              <menus>
+                <Menu mnemonicParsing="false" text="Módulos">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#ventanaAdministracion" text="Administración" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaCargo" text="Cargos → Empleados" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaDepartamento" text="Departamentos" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaHorario" text="Horarios" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaLocales" text="Locales → Cuentas por Cobrar" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaProveedor" text="Proveedores → Cuentas por Pagar" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaTipoCliente" text="Tipo de Clientes → Clientes" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Reportes">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Administración" />
+                        <MenuItem mnemonicParsing="false" text="Clientes" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" onAction="#ventanaProgramador" text="?">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f08f26b4-9858-438d-ab16-fb20973ebabe">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="48"/>
+	<queryString>
+		<![CDATA[call sp_listarAdministracion();]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" uuid="e4a89526-5ce6-471d-8687-cebfd46682b1"/>
+				<imageExpression><![CDATA["C:\\Users\\mynor\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020202\\src\\org\\mynorlopez\\images\\fondo reporte.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="27" y="0" width="73" height="79" uuid="4089fa54-62e4-4f8b-a964-94f445d2276a"/>
+				<imageExpression><![CDATA["C:\\Users\\mynor\\OneDrive\\Documentos\\NetBeansProjects\\KinalMall2020202\\src\\org\\mynorlopez\\images\\Logo menu.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="179" y="32" width="241" height="35" uuid="aa605666-c512-48c4-807f-ab583c225f4d"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte Administración]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="89" y="21" width="416" height="20" backcolor="#FF0000" uuid="abe114f4-fa4a-436b-b214-dce327d0b264"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="100" y="21" width="164" height="20" forecolor="#000000" backcolor="#CC0000" uuid="9f9e2f1e-1804-428f-830c-f132cc0cabad"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CódigoAdministración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="284" y="21" width="74" height="20" uuid="65416d49-bba4-4dc1-b518-eb09277f4f10"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="405" y="21" width="74" height="20" uuid="d4fbd265-30b0-48f8-8db8-358a9de38f2a"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="bcf9e6ab-186c-4355-a04a-cd532bfec8c0"/>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="284" y="0" width="100" height="20" uuid="331bba1a-9aff-4345-a5e0-27d50c189baf"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="405" y="0" width="100" height="20" uuid="1aa0ee07-ad32-4c81-b116-60e87511d9c3"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="89" y="27" width="416" height="1" uuid="30a968d9-9788-4248-90e2-b3672360744e"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="331" y="22" width="241" height="23" uuid="04e5c5a7-e02a-4cf4-b5db-479494582579"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mynor Roberto López Díaz ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="48" splitType="Stretch"/>
+	</summary>
+</jasperReport>

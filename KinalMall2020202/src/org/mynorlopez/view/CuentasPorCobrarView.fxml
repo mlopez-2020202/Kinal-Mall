@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="1257.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mynorlopez.controller.CuentaPorCobrarController">
+   <children>
+      <AnchorPane layoutX="1041.0" layoutY="16.0" prefHeight="390.0" prefWidth="405.0" rotate="-43.4" style="-fx-background-color: #f5deb3; -fx-background-radius: 30 0 0 0;" />
+      <AnchorPane layoutY="-6.0" prefHeight="429.0" prefWidth="200.0" style="-fx-background-color: #e61919;">
+         <children>
+            <AnchorPane layoutX="29.0" prefHeight="153.0" prefWidth="143.0" style="-fx-background-color: #f5deb3; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <Label layoutX="3.0" layoutY="14.0" text="Cuentas Por Cobrar">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="107.0" fitWidth="116.0" layoutX="15.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cuenta%20por%20cobrar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <VBox layoutY="154.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="53.0" prefWidth="207.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Nuevo">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="37.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/nuevo2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="53.0" prefWidth="214.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Eliminar">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="37.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/eliminar2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="53.0" prefWidth="213.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Editar">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="37.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/editar2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="53.0" prefWidth="218.0" styleClass="button1" stylesheets="@../resource/KinalMallCSS.css" text="Reporte">
+                     <font>
+                        <Font name="Tw Cen MT Condensed" size="24.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="37.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reporte2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-62.0" layoutY="353.0" prefHeight="141.0" prefWidth="125.0" rotate="-48.6" style="-fx-background-color: #f5deb3;">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="86.0" layoutY="51.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true" rotate="47.1">
+               <image>
+                  <Image url="@../images/home%20icon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="216.0" layoutY="11.0" prefHeight="100.0" prefWidth="1032.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="170.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.0" minWidth="10.0" prefWidth="121.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="289.0" minWidth="10.0" prefWidth="127.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="316.0" minWidth="10.0" prefWidth="241.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="221.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="  Cod. Cuenta Por Cobrar">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="22.0" />
+               </font>
+            </Label>
+            <Label text="  Mes" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="24.0" />
+               </font>
+            </Label>
+            <Label text="  Código Local" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="24.0" />
+               </font>
+            </Label>
+            <Label text="Número Factura" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="7.0" />
+               </padding>
+            </Label>
+            <Label text="Año" GridPane.columnIndex="4">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="7.0" />
+               </padding>
+            </Label>
+            <Label text="Valor Neto Pago" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="7.0" />
+               </padding>
+            </Label>
+            <Label text="Código Admin." GridPane.rowIndex="2">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="7.0" />
+               </padding>
+            </Label>
+            <Label text="Estado de Pago" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="7.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtCodigoCuentaPorCobrar" editable="false" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="7.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txtMes" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="7.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txtNumeroFactura" editable="false" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="7.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txtValorNetoPago" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="7.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txtAnio" editable="false" GridPane.columnIndex="5">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="20.0" />
+               </font>
+               <padding>
+                  <Insets bottom="7.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="txtEstadoPago" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="7.0" />
+               </padding>
+            </TextField>
+            <ComboBox fx:id="cmbCodigoAdministracion" disable="true" prefHeight="25.0" prefWidth="236.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label prefHeight="27.0" prefWidth="156.0" text="Código Cliente" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Tw Cen MT Condensed" size="24.0" />
+               </font>
+               <padding>
+                  <Insets left="7.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="cmbCodigoCliente" disable="true" prefHeight="25.0" prefWidth="243.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ComboBox fx:id="cmbCodigoLocal" disable="true" prefHeight="25.0" prefWidth="221.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblCuentaPorCobrar" layoutX="216.0" layoutY="140.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="271.0" prefWidth="1032.0" stylesheets="@../resource/KinalMallCSS.css">
+         <columns>
+            <TableColumn fx:id="colCodigoCuentaPorCobrar" prefWidth="158.0" text=" Cod. Cuenta Por Cobrar" />
+            <TableColumn fx:id="colNumeroFactura" prefWidth="125.0" text="Número Factura" />
+            <TableColumn fx:id="colAnio" prefWidth="83.0" text="Año" />
+            <TableColumn fx:id="colMes" minWidth="0.0" prefWidth="70.0" text="Mes" />
+            <TableColumn fx:id="colValorNetoPago" prefWidth="140.0" text="ValorNetoPago" />
+            <TableColumn fx:id="colEstadoPago" prefWidth="136.0" text="Estado de Pago" />
+            <TableColumn fx:id="colCodigoAdministracion" prefWidth="88.0" text="Cod. Admin" />
+            <TableColumn fx:id="colCodigoCliente" prefWidth="138.0" text="Cod. Cliente" />
+            <TableColumn fx:id="colCodigoLocal" prefWidth="93.0" text="Cod. Local" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

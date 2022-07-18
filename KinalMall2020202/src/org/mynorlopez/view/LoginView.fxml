@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mynorlopez.controller.LoginController">
+   <children>
+      <AnchorPane layoutX="-10.0" prefHeight="425.0" prefWidth="300.0" style="-fx-background-color: #e61919;">
+         <children>
+            <ImageView fitHeight="221.0" fitWidth="217.0" layoutX="48.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Logo%20menu%20sin%20fondo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="txtUsuario" layoutX="376.0" layoutY="187.0" prefHeight="33.0" prefWidth="162.0" promptText="User name" style="-fx-background-radius: 30 30 30 30;">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="18.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="psfPassword" layoutX="377.0" layoutY="248.0" prefHeight="33.0" prefWidth="162.0" promptText="Password" style="-fx-background-radius: 30 30 30 30;" />
+      <Label layoutX="410.0" layoutY="390.0" onMouseClicked="#ventanaUsuario" text="Registrese aqui...">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="418.0" layoutY="295.0" mnemonicParsing="false" onAction="#Login" prefHeight="43.0" prefWidth="72.0" styleClass="button2" stylesheets="@../resource/KinalMallCSS.css" text="Login">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgNuevo" fitHeight="37.0" fitWidth="38.0" layoutX="327.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/usuario%20login.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgNuevo1" fitHeight="37.0" fitWidth="38.0" layoutX="324.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/password.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="101.0" fitWidth="145.0" layoutX="403.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/usuarios%20login.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="404.0" layoutY="123.0" onMouseClicked="#ventanaUsuario" prefHeight="27.0" prefWidth="107.0" text="Iniciar Sesión" textFill="#e61919">
+         <font>
+            <Font name="Tw Cen MT Condensed" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
